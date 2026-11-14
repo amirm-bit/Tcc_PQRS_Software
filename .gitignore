@@ -1,0 +1,35 @@
+# Entorno local
+.env
+.env.*
+*.log
+
+# Archivos cargados por los usuarios (privados)
+storage/uploads/*
+!storage/uploads/.gitkeep
+!storage/uploads/avatars/
+!storage/uploads/pqrs/
+!storage/uploads/respuestas/
+!storage/uploads/tramites/
+storage/uploads/avatars/*
+!storage/uploads/avatars/.gitkeep
+storage/uploads/pqrs/*
+!storage/uploads/pqrs/.gitkeep
+storage/uploads/respuestas/*
+!storage/uploads/respuestas/.gitkeep
+storage/uploads/tramites/*
+!storage/uploads/tramites/.gitkeep
+
+# Logs
+storage/logs/*
+!storage/logs/.gitkeep
+
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# Dependencias (no aplica en este proyecto, por si se agregan)
+vendor/
+node_modules/

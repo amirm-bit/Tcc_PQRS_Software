@@ -1,0 +1,24 @@
+# .htaccess raíz - Redirección al front controller y mapeo de assets
+Options -Indexes
+DirectoryIndex public/index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /alcaldia-lorica/
+
+    # Mapear assets y uploads públicos a la carpeta public
+    RewriteRule ^assets/(.*)$ public/assets/$1 [L]
+    RewriteRule ^uploads/(.*)$ public/uploads/$1 [L]
+
+    # No reescribir archivos o directorios existentes
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Todo lo demás al front controller
+    RewriteRule ^ public/index.php [L]
+</IfModule>
+
+<FilesMatch "\.(sql|md|log|ini|json)$">
+    Require all denied
+</FilesMatch>
