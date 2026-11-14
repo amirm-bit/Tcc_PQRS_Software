@@ -116,6 +116,16 @@ La guía paso a paso para la demostración está en [`docs/GUIA_DEMOSTRACION.md`
 - **No se guardan adjuntos:** confirme permisos de escritura en `storage/uploads`.
 - **Error de conexión a MySQL:** verifique que el servicio esté iniciado y los datos de `config/database.php`.
 
+## 9. Repositorio y clonación
+
+Repositorio en GitHub: `https://github.com/amirm-bit/alcaldia-lorica`
+
+```bash
+git clone https://github.com/amirm-bit/alcaldia-lorica.git
+```
+
+> Las cuentas de demostración documentadas en la sección 3 son únicamente para pruebas locales. No las utilice en entornos productivos.
+
 ---
 
 Proyecto con fines académicos y de demostración. No incluye envío real de correos ni pasarela de pagos.
